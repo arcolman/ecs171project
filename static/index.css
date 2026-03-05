@@ -1,0 +1,128 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-family: sans-serif;
+
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+h1 {
+    text-align: center;
+}
+
+.teams {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    justify-self: center;
+}
+
+input {
+    margin: 8px 0;
+    padding: 8px;
+    width: 200px;
+}
+
+#inputa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    background: rgba(251, 83, 83, 0.93);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15.2px);
+    -webkit-backdrop-filter: blur(15.2px);
+    border: 1px solid rgb(255, 58, 127);
+}
+
+#inputb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    background: rgba(83, 105, 251, 0.93);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15.2px);
+    -webkit-backdrop-filter: blur(15.2px);
+    border: 1px solid rgba(83, 105, 251, 1);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+table {
+    margin-top: 30px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px, solid, black;
+}
+
+#submit {
+    margin-bottom: 10px;
+}
+
+#submit {
+	box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	background-color:#bddbfa;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+#submit:hover {
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	background-color:#80b5ea;
+}
+#submit:active {
+	position:relative;
+	top:1px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10%;
+    padding-top: 5%;
+}
+
+.form {
+    width: 400px;
+}
+
+.results {
+    width: 300px;
+    margin: 10px;
+}

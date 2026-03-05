@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NBA Matchup Predictor</title>
+  <link rel="stylesheet" href="../static/index.css">
+</head>
+
+<body>
+  <h1>NBA Matchup Predictor</h1>
+  <div class="main">
+    <div class="form">
+      <form method="POST">
+
+        <div class="teams">
+          <div id="inputa">
+            <h2>Team A</h2>
+
+            <input name="team_a_name" placeholder="Team A Name" required>
+            <input name="a_fg" placeholder="FG%" type="number" step="any" required>
+            <input name="a_stl" placeholder="Steals per game" type="number" step="any" required>
+            <input name="a_x3p" placeholder="3P made" type="number" step="any" required>
+            <input name="a_ast" placeholder="Assists per game" type="number" step="any" required>
+            <input name="a_ft" placeholder="FT per game" type="number" step="any" required>
+            <input name="a_x2p" placeholder="2P made" type="number" step="any" required>
+
+          </div>
+
+
+          <div id="inputb">
+            <h2>Team B</h2>
+
+            <input name="team_b_name" placeholder="Team B Name" required>
+            <input name="b_fg" placeholder="FG%" type="number" step="any" required>
+            <input name="b_stl" placeholder="Steals per game" type="number" step="any" required>
+            <input name="b_x3p" placeholder="3P made" type="number" step="any" required>
+            <input name="b_ast" placeholder="Assists per game" type="number" step="any" required>
+            <input name="b_ft" placeholder="FT per game" type="number" step="any" required>
+            <input name="b_x2p" placeholder="2P made" type="number" step="any" required>
+
+          </div>
+
+        </div>
+
+        <button type="submit" id="submit">Predict Winner</button>
+
+      </form>
+    </div>
+    <div class="results">
+      {% if results %}
+
+      <h2>Results</h2>
+
+      <table>
+
+        <tr>
+          <th>Model</th>
+          <th>Predicted Winner</th>
+        </tr>
+
+        {% for r in results %}
+
+        <tr>
+          <td>{{ r.model }}</td>
+          <td>{{ r.winner }}</td>
+        </tr>
+
+        {% endfor %}
+
+      </table>
+
+      {% else %}
+
+      <h2>Results</h2>
+
+      <table>
+        <tr>
+          <th>Model</th>
+          <th>Predicted Winner</th>
+        </tr>
+        <tr>
+          <td>Linear Regression</td>
+          <td>Enter values...</td>
+        </tr>
+        <tr>
+          <td>Random Forest</td>
+          <td>Enter values...</td>
+        </tr>
+        <tr>
+          <td>Ridge Regression</td>
+          <td>Enter values...</td>
+        </tr>
+      </table>
+      {% endif %}
+
+    </div>
+  </div>
+</body>
+
+</html>
